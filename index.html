@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Garcia Luxe Collective</title>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Montserrat:wght@400;500&display=swap" rel="stylesheet" />
+  <style>
+    :root {
+      --navy: #1a233a;
+      --gold: #d5b982;
+      --cream: #f8f6f2;
+      --accent: #b0845c;
+      --text-dark: #222;
+    }
+    body {
+      margin: 0;
+      font-family: 'Montserrat', Arial, sans-serif;
+      background: var(--cream);
+      color: var(--text-dark);
+    }
+    header {
+      text-align: center;
+      padding: 48px 20px 24px 20px;
+      background: var(--navy);
+      color: white;
+      position: relative;
+    }
+    .logo {
+      max-width: 120px;
+      margin-bottom: 20px;
+    }
+    h1 {
+      font-family: 'Playfair Display', serif;
+      font-size: 2.6em;
+      margin: 0;
+      letter-spacing: 1px;
+      font-weight: 700;
+      color: var(--gold);
+    }
+    .tagline {
+      font-size: 1.25em;
+      margin: 12px 0 6px 0;
+      color: var(--gold);
+      font-weight: 500;
+    }
+    .subtitle {
+      font-size: 1.1em;
+      color: #eee;
+      margin-bottom: 10px;
+      font-style: italic;
+    }
+    .description {
+      max-width: 650px;
+      margin: 18px auto 0 auto;
+      color: #f8eecb;
+      font-size: 1.15em;
+      font-weight: 400;
+      line-height: 1.7;
+    }
+    .bullets {
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+      margin: 28px auto 0 auto;
+      max-width: 400px;
+      font-size: 1.1em;
+    }
+    .bullets span {
+      background: rgba(213,185,130,0.13);
+      padding: 7px 15px;
+      border-radius: 18px;
+      color: var(--gold);
+      font-weight: 500;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+    .container {
+      max-width: 520px;
+      margin: 36px auto 24px auto;
+      background: white;
+      border-radius: 16px;
+      box-shadow: 0 2px 32px 0 rgba(40,40,56,0.09);
+      padding: 36px 20px 30px 20px;
+    }
+    form label {
+      display: block;
+      margin-top: 18px;
+      font-weight: 500;
+      color: var(--navy);
+      font-size: 1.03em;
+      letter-spacing: 0.3px;
+    }
+    input, select {
+      width: 100%;
+      margin-top: 7px;
+      padding: 12px 10px;
+      font-size: 1em;
+      border: 1.5px solid var(--gold);
+      border-radius: 8px;
+      font-family: 'Montserrat', Arial, sans-serif;
+      box-sizing: border-box;
+      background: #f9f7f1;
+      color: var(--text-dark);
+      transition: border .2s;
+    }
+    input[type='file'] {
+      background: none;
+      color: #222;
+      padding: 5px 0;
+      border: none;
+    }
+    input:focus, select:focus {
+      outline: none;
+      border-color: var(--accent);
+      box-shadow: 0 0 0 1.5px var(--accent);
+    }
+    button, input[type="submit"] {
+      width: 100%;
+      margin-top: 24px;
+      background: var(--gold);
+      color: var(--navy);
+      font-weight: bold;
+      border: none;
+      border-radius: 8px;
+      padding: 15px 0;
+      font-size: 1.15em;
+      cursor: pointer;
+      transition: background 0.2s, color 0.2s;
+    }
+    button:hover, input[type="submit"]:hover {
+      background: var(--accent);
+      color: white;
+    }
+    .disclaimer {
+      font-size: 0.92em;
+      color: #666;
+      margin-top: 14px;
+      line-height: 1.5;
+      text-align: center;
+    }
+    .thankyou-message {
+      display: none;
+      text-align: center;
+      padding: 34px 0;
+      color: var(--navy);
+      font-family: 'Playfair Display', serif;
+      font-size: 1.2em;
+      font-weight: 500;
+      margin-top: 14px;
+    }
+    @media (max-width: 700px) {
+      .container { padding: 22px 3vw 20px 3vw;}
+      header { padding: 28px 3vw 16px 3vw;}
+      .description, .bullets { font-size: 1em;}
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <img class="logo" src="assets/logo.png" alt="Garcia Luxe Collective Logo" />
+    <h1>Garcia Luxe Collective</h1>
+    <div class="tagline">Where Vision Meets Value</div>
+    <div class="subtitle">Your Bridge to Elite Bay Area Real Estate</div>
+    <div class="description">
+      We move Bay Area luxury differently. At Garcia Luxe Collective, sharp local expertise meets top-tier presentation to unlock opportunities others overlook. Your next move deserves more than just a listing—we specialize in high-end, personalized real estate across the Bay Area. Whether buying, selling, or investing, we deliver concierge-level service and curated results—crafted with care, style, and precision.
+    </div>
+    <div class="bullets">
+      <span>💼 Off-Market &amp; Investment Opportunities</span>
+      <span>📊 Data-Driven Valuation &amp; Pricing Insights</span>
+      <span>📍 Deep Local Market Expertise</span>
+    </div>
+  </header>
+
+  <div class="container">
+    <form id="leadForm">
+      <label for="name">Full Name</label>
+      <input type="text" name="name" id="name" required />
+
+      <label for="email">Email Address</label>
+      <input type="email" name="email" id="email" required />
+
+      <label for="phone">Phone Number</label>
+      <input type="tel" name="phone" id="phone" required />
+
+      <label for="focus">Investment Focus</label>
+      <select name="focus" id="focus" required>
+        <option value="">Select one...</option>
+        <option value="Single-Family">Single-Family</option>
+        <option value="Multifamily">Multifamily</option>
+        <option value="Fix & Flip">Fix & Flip</option>
+        <option value="Buy & Hold">Buy & Hold</option>
+      </select>
+
+      <label for="pof">Upload Proof of Funds</label>
+      <input type="file" name="pof" id="pof" accept=".pdf,.jpg,.jpeg,.png" required />
+
+      <label for="loi">Upload LOI (Letter of Intent)</label>
+      <input type="file" name="loi" id="loi" accept=".pdf,.jpg,.jpeg,.png" required />
+
+      <input type="submit" value="Apply for Access" />
+
+      <div class="disclaimer">
+        To maintain the integrity of our exclusive network, we only grant access to verified, qualified investors.<br>
+        Please upload a recent proof of funds and an LOI. Your information will be handled confidentially and used solely for verification purposes. We respect your privacy and appreciate your trust.
+      </div>
+    </form>
+    <div class="thankyou-message" id="thankyou-message">
+      Thank you for applying!<br>
+      Your submission has been received. We’ll be in touch soon.
+    </div>
+  </div>
+  <script>
+    document.getElementById('leadForm').addEventListener('submit', async function(e) {
+      e.preventDefault();
+      const form = e.target;
+
+      function getFileField(id) {
+        const fileInput = document.getElementById(id);
+        const file = fileInput.files[0];
+        return new Promise((resolve) => {
+          if (!file) return resolve({data: "", name: "", type: ""});
+          const reader = new FileReader();
+          reader.onload = function(evt) {
+            const base64 = evt.target.result.split(',')[1];
+            resolve({data: base64, name: file.name, type: file.type});
+          };
+          reader.readAsDataURL(file);
+        });
+      }
+
+      const pof = await getFileField("pof");
+      const loi = await getFileField("loi");
+
+      const payload = new URLSearchParams({
+        name: form.name.value,
+        email: form.email.value,
+        phone: form.phone.value,
+        focus: form.focus.value,
+        pof_data: pof.data,
+        pof_name: pof.name,
+        pof_type: pof.type,
+        loi_data: loi.data,
+        loi_name: loi.name,
+        loi_type: loi.type
+      });
+
+      const submitBtn = form.querySelector('[type="submit"]');
+      submitBtn.disabled = true;
+      submitBtn.value = "Submitting...";
+
+      fetch("YOUR_GOOGLE_APPS_SCRIPT_WEBAPP_URL", {
+        method: "POST",
+        body: payload
+      }).then(async res => {
+        const text = await res.text();
+        if (text.trim() === "Success") {
+          form.style.display = "none";
+          document.getElementById("thankyou-message").style.display = "block";
+        } else {
+          alert("Submission failed: " + text);
+          submitBtn.disabled = false;
+          submitBtn.value = "Apply for Access";
+        }
+      }).catch(err => {
+        alert("Submission failed. Please try again later.");
+        submitBtn.disabled = false;
+        submitBtn.value = "Apply for Access";
+      });
+    });
+  </script>
+</body>
+</html>
