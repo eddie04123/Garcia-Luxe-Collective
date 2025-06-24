@@ -250,7 +250,7 @@
       submitBtn.disabled = true;
       submitBtn.value = "Submitting...";
 
-      fetch("YOUR_GOOGLE_APPS_SCRIPT_WEBAPP_URL", {
+      fetch("https://script.google.com/macros/s/AKfycbyAsWt_cPK-NauX08fTONyTLjzSoM4UKeC2-8tJOygjxAV8gA__dkb41u2RaM44lKpe/exec", {
         method: "POST",
         body: payload
       }).then(async res => {
